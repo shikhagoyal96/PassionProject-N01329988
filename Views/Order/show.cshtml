@@ -1,0 +1,19 @@
+﻿@model PassionProject_N01329988.Models.Order
+@{
+    ViewBag.Title = "show";
+}
+
+    <h2>#@Model.OrderID order details:</h2>
+<span>Orderid:</span>@Model.OrderID<br />
+<span>CustomerName:</span>@Model.Customer.CustomerName<br />
+ <span>CandyName:</span>@Model.Candy.CandyName<br />
+ <span>CandyPrice:</span>@Model.Candy.CandyPrice<br />
+<span>Order quantity:</span>@Model.OrderQty<br />
+ <span>Order Pay:</span>@Model.OrderPay<br />
+
+                                       <div>
+                                           <a href="/Order/delete/@Model.OrderID">Delete</a>
+                                           <a href="/Order/update/@Model.OrderID">Update</a>
+                                           <a href="/Order/print/@Model.OrderID">Print Receipt</a>
+                                       </div>
+

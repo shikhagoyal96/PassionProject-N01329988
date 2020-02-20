@@ -1,0 +1,16 @@
+﻿@model PassionProject_N01329988.Models.Candy
+@{
+    ViewBag.Title = "updateCandy";
+}
+
+    <h2>@Model.CandyName details:</h2>
+
+<form action="/Candy/updateCandy/@Model.CandyId " method="POST">
+
+    <span>Name:</span><input type="text" value="@Model.CandyName" id="CandyName" name="CandyName" /><br />
+
+    <input type="submit" value="update candy" />
+
+
+    </form>
+

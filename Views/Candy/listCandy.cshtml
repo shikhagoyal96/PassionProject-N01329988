@@ -1,0 +1,21 @@
+﻿@model List<PassionProject_N01329988.Models.Candy>
+@{
+    ViewBag.Title = "listCandy";
+}
+
+<h2>List of Candies</h2>
+
+@{ 
+    foreach(var Candy in Model)
+    {
+        
+    <span>Name: </span><a href="/Candy/showCandy/@Candy.CandyId">@Candy.CandyName</a><br />
+      <span>Price(each): </span>@Candy.CandyPrice<br /><hr />
+
+       
+    }
+    <div>
+            <a href="/Candy/addCandy">Add new candy</a>
+        </div>
+}
+

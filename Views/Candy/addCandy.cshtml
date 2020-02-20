@@ -1,0 +1,25 @@
+﻿@model List<PassionProject_N01329988.Models.Candy>
+@{
+    ViewBag.Title = "addCandy";
+}
+
+<h2>addCandy</h2>
+
+<form method="post" action="/Candy/addCandy">
+
+    <div>
+        <label for="CandyName">Candy Name:</label>
+        <input type="text" id="CandyName" name="CandyName" />
+    </div>
+    
+    <div>
+        <label for="candyprice">Candy Price:</label>
+        <input type="text" id="cadyprice" name="candyprice" />
+    </div>
+
+    <div>
+        <input type="submit"  value="ADD"/>
+    </div>
+
+</form>
+

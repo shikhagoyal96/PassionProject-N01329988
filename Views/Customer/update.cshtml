@@ -1,0 +1,22 @@
+﻿@model  PassionProject_N01329988.Models.Customer
+@{
+    ViewBag.Title = "update";
+}
+
+    <h2>@Model.CustomerName Details:</h2>
+
+<form method="post" action="/Customer/update/@Model.CustomerID">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="@Model.CustomerName" />
+    </div>
+    <div>
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact" id="contact" value="@Model.CustomerContact" />
+    </div>
+
+    <div>
+        <input type="submit" value="UPDATE" />
+    </div>
+</form>
+

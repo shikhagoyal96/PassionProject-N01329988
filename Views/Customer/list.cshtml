@@ -1,0 +1,21 @@
+﻿@model List<PassionProject_N01329988.Models.Customer>
+@{
+    ViewBag.Title = "list";
+}
+
+<h2>List Of Customers</h2>
+
+@{ 
+    foreach(var Customer in Model)
+    {
+    
+    <span>Name: </span><a href="/Customer/show/@Customer.CustomerID"> @Customer.CustomerName</a><br />
+    <span>Contact: </span> @Customer.CustomerContact<br />
+     <a href="/Order/list">Take new Order</a><hr />
+    }
+    <div>
+        <a href="/Customer/add">ADD NEW CUSTOMER</a>
+
+    </div>
+    }
+

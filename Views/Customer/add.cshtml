@@ -1,0 +1,23 @@
+﻿@model PassionProject_N01329988.Models.Customer
+@{
+    ViewBag.Title = "add";
+}
+
+<h2>add</h2>
+
+<form action="/Customer/add" method="post">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+    </div> 
+    <div>
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" />
+    </div>
+    <div>
+        <input type="submit" value="ADD" />
+    </div>
+
+</form>
+

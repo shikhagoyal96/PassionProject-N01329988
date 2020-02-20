@@ -1,0 +1,25 @@
+﻿@model List<PassionProject_N01329988.Models.Order>
+@{
+    ViewBag.Title = "list";
+}
+
+<h2>List of Orders:</h2>
+
+@{ 
+    foreach(var Order in Model)
+    {
+       <a href="/Order/show/@Order.OrderID">Order</a><br />
+        <span>Customer Name:</span><a href="/Customer/show/@Order.Customer.CustomerID">@Order.Customer.CustomerName</a><br />
+        <span>Candy Name:</span><a href="/Candy/showCandy/@Order.Candy.CandyId">@Order.Candy.CandyName</a><br />
+        <span>Candy Price (per):</span>@Order.Candy.CandyPrice<br />
+        <span>Order Quantity:</span>@Order.OrderQty<br />
+        <span>Order Pay</span>@(Order.OrderQty * Order.Candy.CandyPrice)<span>cad</span><br />
+    <hr />
+     <div>
+            <a href="/Order/add">New Order</a>
+        </div>
+
+
+
+        }
+        }

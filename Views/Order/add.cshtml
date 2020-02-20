@@ -1,0 +1,31 @@
+﻿@model List<PassionProject_N01329988.Models.Candy>
+
+@{
+    ViewBag.Title = "add";
+}
+
+<h2>add</h2>
+
+<form action="/Order/add" method="post">
+    <div>
+        <label for="cid">CandyName:</label>
+        <select id="cid" type="text" name="candyid">
+             @{ 
+                 foreach(var candy in Model)
+                 {
+                     <option value="@candy.CandyId">@candy.CandyName</option>
+                 }
+             }
+        </select>
+        
+    </div>
+    <div>
+        <label for="qty">CandyQty:</label>
+        <input type="text" id="qty" name="qty" />
+    </div>
+    <div>
+        <input type="submit" value="ADD" />
+    </div>
+</form>
+
+

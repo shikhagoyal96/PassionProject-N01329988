@@ -1,0 +1,16 @@
+﻿@model PassionProject_N01329988.Models.Candy
+@{
+    ViewBag.Title = "showCandy";
+}
+
+    <h2>@Model.CandyName details:</h2>
+
+<p>Id: @Model.CandyId</p>
+<p>Name: @Model.CandyName</p>
+<p>Price(each): @Model.CandyPrice</p>
+<div>
+    <a href="/Candy/updateCandy">UPDATE</a>
+    <a href="/Candy/Delete/@Model.CandyId">DELETE</a>
+</div>
+
+
